@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Lalezar&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+img {
+  @apply rounded-3xl;
+}
+.startBtn {
+  @apply rounded-full bg-gradient-to-r from-start-blue  to-start-cyan h-14 w-52 text-color-text font-lalezar stroke-black text-3xl hover:opacity-75 transition-all active:translate-y-1;
+}
+
+.greenbtn {
+  @apply rounded-full w-36 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-grens;
+}
+
+.redbtn {
+  @apply rounded-full w-36 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-reds;
+}
+
+.whitebtn {
+  @apply rounded-full w-36 h-8 font-lalezar hover:opacity-80 active:translate-y-0.5 bg-whites text-black;
+}
+
+.violetbtn {
+  @apply rounded-full w-36 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-violets;
+}
