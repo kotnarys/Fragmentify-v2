@@ -9,6 +9,7 @@ module.exports = {
         "start-text": "#F8F8F8",
         "start-paragraph": "#908B8B",
         "color-text": "#F8F8F8",
+        "footer-color": "#1A1A1C",
         violets: "#8C3F9F",
         reds: "#AD3838",
         grens: "#4D9F3F",
@@ -18,7 +19,7 @@ module.exports = {
         nftbg: "#D9D9D9",
       },
       backgroundImage: {
-        home: "url(../../public/HomePage.jpg)",
+        home: "url(../public/HomePage.jpg)",
       },
       fontFamily: {
         lalezar: ["Lalezar"],
