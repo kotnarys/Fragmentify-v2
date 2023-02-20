@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/Pattern.js"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -17,6 +20,7 @@ module.exports = {
         whites: "#ECECEC",
         patternbg: "#E2E2E2",
         nftbg: "#D9D9D9",
+        prices: "#CACACA",
       },
       backgroundImage: {
         home: "url(../public/HomePage.jpg)",

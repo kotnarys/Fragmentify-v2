@@ -1,9 +1,8 @@
 import React from "react";
+
 import Button from "../components/Button";
-import s from "./home.module.scss";
 import ImageSlider from "../components/ImageSlider/ImageSlider";
-import GuideDAO from "../public/GuideDAO.png";
-import GitHub from "../public/GitHub.png";
+import s from "./home.module.scss";
 
 export default function Home() {
   return (

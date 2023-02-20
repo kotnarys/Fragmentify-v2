@@ -24,9 +24,9 @@ img {
 }
 
 .whitebtn {
-  @apply rounded-full w-36 h-8 font-lalezar hover:opacity-80 active:translate-y-0.5 bg-whites text-black;
+  @apply rounded-full w-28 h-8 font-lalezar hover:opacity-80 active:translate-y-0.5 bg-whites text-black;
 }
 
 .violetbtn {
-  @apply rounded-full w-36 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-violets;
+  @apply rounded-full w-24 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-violets;
 }

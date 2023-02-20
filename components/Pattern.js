@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function Pattern({ children }) {
-  const [account, setAccount] = useState("");
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-  async function requestAccount() {
-    if (window.ethereum) {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setAccount(accounts[0]);
-      } catch (error) {
-        console.log("error");
-      }
-    }
-  }
+import Marketplace from "./Marketplace";
+import Profile from "./Profile";
+import Resale from "./Resale";
+
+export default function Pattern() {
+  const [page, setPage] = useState("");
 
   return (
     <>
@@ -30,38 +23,46 @@ export default function Pattern({ children }) {
             />
           </Link>
           <div className="flex pl-40">
-            <Link
-              href="/marketplace"
-              className="p-2 text-3xl active:translate-y-1 hover:text-blue-500 font-lalezar"
+            <button
+              disabled={page === "market" ? 1 : 0}
+              onClick={() => setPage("market")}
+              className="p-2 text-3xl active:translate-y-1 hover:text-purple-600 font-lalezar disabled:text-blue-500 disabled:active:translate-y-0"
             >
               MARKET
-            </Link>
+            </button>
             <h3 className="p-2 text-3xl font-lalezar">|</h3>
-            <Link
-              href="/resale"
-              className="p-2 text-3xl active:translate-y-1 hover:text-blue-500 font-lalezar"
+            <button
+              disabled={page === "resale" ? 1 : 0}
+              onClick={() => {
+                setPage("resale");
+              }}
+              className="p-2 text-3xl active:translate-y-1 hover:text-purple-600 font-lalezar disabled:text-blue-500 disabled:active:translate-y-0"
             >
               RESALE
-            </Link>
-          </div>
-          {account ? (
-            <Link
-              className="p-2 text-base text-white active:translate-y-1 h-11 w-60 hover:text-blue-100 font-lalezar bg-start-paragraph rounded-full"
-              href="/profile"
-            >
-              {account}
-            </Link>
-          ) : (
-            <button
-              onClick={requestAccount}
-              className="p-2 bg-start-paragraph text-white rounded-full h-11 w-60 text-2xl active:translate-y-1 hover:text-grays font-lalezar"
-            >
-              CONNECT WALLET
             </button>
-          )}
+            <h3 className="p-2 text-3xl font-lalezar">|</h3>
+            <button
+              disabled={page === "profile" ? 1 : 0}
+              onClick={() => {
+                setPage("profile");
+              }}
+              className="p-2 text-3xl active:translate-y-1 hover:text-purple-600 font-lalezar disabled:text-blue-500 disabled:active:translate-y-0"
+            >
+              PROFILE
+            </button>
+          </div>
+          <ConnectButton />
         </nav>
         <div className=" flex justify-center">
-          <div className="bg-grays w-11/12 m-5 rounded-md">{children}</div>
+          <div className="bg-grays w-11/12 mb-5 rounded-md">
+            {page === "market" ? (
+              <Marketplace />
+            ) : page === "resale" ? (
+              <Resale />
+            ) : (
+              <Profile />
+            )}
+          </div>
         </div>
       </div>
     </>

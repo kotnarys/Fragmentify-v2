@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import s from "./slider.module.scss";
-import { EffectCoverflow, Pagination } from "swiper";
 import "swiper/css/effect-cards";
-import { EffectCards } from "swiper";
+
+import React, { useEffect, useState } from "react";
+
+import { EffectCards, EffectCoverflow, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import s from "./slider.module.scss";
 
 export default function ImageSlider() {
   const [windowWidth, setWindowWidth] = useState(0);
