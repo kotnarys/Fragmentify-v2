@@ -34,7 +34,7 @@
     }
   }
   .carousel {
-    @apply w-[900px]  rotate-[20deg];
+    @apply w-[800px]  rotate-[15deg];
     @media screen and (width < 1500px) {
       @apply w-[700px];
     }
@@ -43,7 +43,7 @@
     }
   }
   .footer {
-    @apply absolute bottom-0 w-screen text-white bg-footer-color flex justify-between px-10 py-5;
+    @apply absolute bottom-0 w-screen text-white bg-footer-color flex justify-between px-10 py-3;
     @media screen and (width<1200px) {
       @apply justify-center;
     }
@@ -64,7 +64,7 @@
       .marquee_container {
         overflow: hidden;
         .marquee {
-          animation: marquee 10s infinite linear;
+          animation: marquee 9s linear 0s infinite alternate;
         }
       }
       @keyframes marquee {

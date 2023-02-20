@@ -32,9 +32,10 @@ export default function Home() {
           <img src="/GitHub.png" alt="GitHub_Image" />
           <div className={s.marquee_container}>
             <p className={s.marquee}>
-              @kotnarys @3TERRRNITY @Serggoal @Bubble7777 @stunter777
+              @kotnarys @3TERRRNITY @Serggoal @Bubble7777 @cartlex
             </p>
           </div>
+          <img src="/GitHub.png" alt="GitHub_Image" />
         </div>
       </div>
     </div>
