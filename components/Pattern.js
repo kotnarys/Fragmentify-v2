@@ -2,14 +2,28 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-
 import Marketplace from "./Marketplace";
+import MintButton from "./MintButton";
 import Profile from "./Profile";
 import Resale from "./Resale";
 
 export default function Pattern() {
   const [page, setPage] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleConnectWallet = async () => {
+    try {
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      setAddress(accounts[0]);
+      console.log(address);
+
+      return address[0];
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
@@ -51,7 +65,8 @@ export default function Pattern() {
               PROFILE
             </button>
           </div>
-          <ConnectButton />
+          <MintButton address={address} />
+          <button onClick={handleConnectWallet}>Connect MetaMask</button>
         </nav>
         <div className=" flex justify-center">
           <div className="bg-grays w-11/12 mb-5 rounded-md">
