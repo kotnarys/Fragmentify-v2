@@ -1,11 +1,11 @@
 import "@rainbow-me/rainbowkit/styles.css";
 
-import Pattern from "../components/Pattern.js";
+import Home from "./home.js";
 
 export default function Index() {
   return (
     <>
-      <Pattern />
+      <Home />
     </>
   );
 }
