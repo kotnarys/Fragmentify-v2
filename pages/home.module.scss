@@ -34,9 +34,9 @@
     }
   }
   .carousel {
-    @apply w-[800px]  rotate-[15deg];
+    @apply w-[800px]  rotate-[25deg] ml-32;
     @media screen and (width < 1500px) {
-      @apply w-[700px];
+      @apply w-[700px] ml-0;
     }
     @media screen and (width<1280px) {
       @apply rotate-0 w-[200px];
