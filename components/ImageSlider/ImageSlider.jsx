@@ -61,40 +61,25 @@ export default function ImageSlider() {
             <img src="/NFT_4.jpg" alt="img4" />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
-          </div>
-        </SwiperSlide>
         //Дополнительные фото в карусель
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
+            <img src="/cat_nft.png" alt="img2" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img1" />
+            <img src="/fox.jpg" alt="img1" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_3.jpg" alt="img3" />
+            <img src="/monke.png" alt="img3" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_4.jpg" alt="img4" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
+            <img src="/whales.png" alt="img4" />
           </div>
         </SwiperSlide>
       </Swiper>
@@ -102,32 +87,12 @@ export default function ImageSlider() {
       <Swiper {...desktopCarousel} className={s.container}>
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img1" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
-            <img src="/NFT_3.jpg" alt="img3" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
             <img src="/NFT_4.jpg" alt="img4" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.box}>
             <img src="/NFT_2.jpg" alt="img2" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img1" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -138,17 +103,22 @@ export default function ImageSlider() {
         //Дополнительные фото в карусель
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_4.jpg" alt="img4" />
+            <img src="/cat_nft.png" alt="img2" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
+            <img src="/fox.jpg" alt="img1" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={s.box}>
-            <img src="/NFT_2.jpg" alt="img2" />
+            <img src="/monke.png" alt="img3" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={s.box}>
+            <img src="/whales.png" alt="img4" />
           </div>
         </SwiperSlide>
       </Swiper>
