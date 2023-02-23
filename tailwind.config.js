@@ -21,6 +21,7 @@ module.exports = {
         patternbg: "#E2E2E2",
         nftbg: "#D9D9D9",
         prices: "#CACACA",
+        modalbg: "#5837B6",
       },
       backgroundImage: {
         home: "url(../public/HomePage.jpg)",

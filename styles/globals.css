@@ -16,7 +16,7 @@ img {
 }
 
 .greenbtn {
-  @apply rounded-full w-36 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-grens;
+  @apply rounded-full w-36 h-8 text-white font-lalezar hover:opacity-80 active:translate-y-0.5 bg-grens mb-5;
 }
 
 .redbtn {

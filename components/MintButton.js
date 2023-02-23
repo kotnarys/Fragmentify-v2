@@ -2,21 +2,18 @@ import React, { useState } from "react";
 
 import { BrowserProvider } from "ethers";
 
-import NFT2 from "./Contract.js";
+import NFT3 from "./Contract/NftContract.js";
 
 function MintButton({ address }) {
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(3);
   async function handleMintClick() {
     const provider = new BrowserProvider(window.ethereum);
     const signer = await provider.getSigner();
-    const nft = NFT2.connect(signer);
-
-    console.log(address);
+    const nft = NFT3.connect(signer);
 
     try {
       await nft.safeMint(address, id);
       setId(id + 1);
-      console.log("mint sucsess");
     } catch (error) {
       console.error(error);
     }

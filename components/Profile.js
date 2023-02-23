@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Profile() {
+import uuid from "react-uuid";
+
+import NftCard from "./NFT/NftCard.jsx";
+import PurchaseButton from "./PurchaseButton.js";
+
+function Profile({ addresss, setIsVisible, NFTs, setNftContactAddress }) {
+  const [NFTonMarket, setNFTonMarket] = useState([]);
+
+  function handleSplitClick(NFTtitle) {
+    console.log(NFTtitle);
+  }
   return (
     <>
       <div>
@@ -8,19 +18,37 @@ function Profile() {
           <h2 className="pt-2 text-3xl text-white font-lalezar">FULL</h2>
           <div className="bg-white w-11/12 h-0.5"></div>
         </div>
-        <div className="h-96 flex pl-16 pt-5">
-          {0 ? (
-            <h1 className="text-red-300 p-5 font-lalezar text-3xl">
-              YOU DON'T HAVE AN NFT{" "}
-            </h1>
-          ) : (
-            <div className="flex flex-col items-center h-96  ">
-              <div className="h-64  flex items-center justify-center bg-white rounded-2xl m-3">
-                <img className="h-60 m-3" src="/NFT_2.jpg"></img>
-              </div>
-              <button className="greenbtn">SPLIT</button>
-            </div>
-          )}
+        <div className=" flex pt-5 justify-center">
+          <div>
+            <section className="flex flex-wrap justify-center">
+              {NFTs ? (
+                NFTs.map((NFT) => {
+                  return (
+                    <div className="flex flex-col items-center " key={uuid()}>
+                      <NftCard
+                        image={NFT.media[0].gateway}
+                        id={NFT.id.tokenId}
+                        title={NFT.title}
+                        address={NFT.contract.address}
+                      ></NftCard>
+
+                      <button
+                        id="splitbutton"
+                        className="greenbtn"
+                        onClick={handleSplitClick(NFT.contract.address)}
+                      >
+                        SPLIT
+                      </button>
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="text-white m-32 3xl font-lalezar flex justify-center">
+                  No NFTs found
+                </div>
+              )}
+            </section>
+          </div>
         </div>
       </div>
 
@@ -29,33 +57,8 @@ function Profile() {
           <h2 className="pt-2 text-3xl text-white font-lalezar">SPLITED</h2>
           <div className="bg-white w-11/12 h-0.5"></div>
         </div>
-        <div className="h-96 flex pl-16 pt-5">
-          {0 ? (
-            <h1 className="text-red-300 p-5 font-lalezar text-3xl">
-              YOU DON'T HAVE AN NFT{" "}
-            </h1>
-          ) : (
-            <div className="flex flex-col items-center h-96  ">
-              <div className="h-64  flex items-center justify-center bg-white rounded-2xl m-3">
-                <img className="h-60 m-3" src="/NFT_2.jpg"></img>
-              </div>
-              <button className="redbtn">CANCEL SELL</button>
-            </div>
-          )}
-          {0 ? (
-            <h1 className="text-red-300 p-5 font-lalezar text-3xl">
-              YOU DON'T HAVE AN NFT{" "}
-            </h1>
-          ) : (
-            <div className="flex flex-col items-center h-96  ">
-              <div className="h-64  flex items-center justify-center bg-white rounded-2xl m-3">
-                <img className="h-60 m-3" src="/NFT_2.jpg"></img>
-              </div>
-              <button className="redbtn">SELL</button>
-              <button className="m-1 greenbtn">JOIN</button>
-            </div>
-          )}
-        </div>
+        <PurchaseButton />
+        <div className="h-96 flex pl-16 pt-5"></div>
       </div>
     </>
   );
